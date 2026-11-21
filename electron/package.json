@@ -1,0 +1,42 @@
+{
+  "name": "sete-capitaes-explica-iara",
+  "version": "1.0.0",
+  "description": "Sete Capitaes explica: Barco Iara 2026",
+  "main": "main.js",
+  "author": "Pedro Henrique Nascimento de Oliveira (Pedrones)",
+  "license": "UNLICENSED",
+  "scripts": {
+    "copy": "node -e \"require('fs').copyFileSync('../index.html','index.html')\"",
+    "start": "npm run copy && electron .",
+    "dist": "npm run copy && electron-builder --win --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "br.iff.setecapitaes.iara",
+    "productName": "Sete Capitaes Explica - Barco Iara 2026",
+    "files": [
+      "main.js",
+      "index.html"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "build/icon.png",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "portable": {
+      "artifactName": "Iara-2026-Portatil.exe"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+Programa (.exe) - gerado a partir do index.html da raiz do repositorio.
+Local:   npm install  &&  npm run dist      (saida em electron/dist)
+Teste:   npm install  &&  npm start
+Nuvem:   aba Actions > "Gerar executavel Windows" > Run workflow (baixe em Artifacts).
+F11 = tela cheia. O programa nao usa internet.
